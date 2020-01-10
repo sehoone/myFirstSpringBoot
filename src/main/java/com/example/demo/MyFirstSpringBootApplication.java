@@ -6,12 +6,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages= {"com.example"})
+@ComponentScan(basePackages= {"com.example.board"})
 public class MyFirstSpringBootApplication {
 
 	public static void main(String[] args) {
-		SpringApplication application = 
-new SpringApplication(MyFirstSpringBootApplication.class);
+		System.out.println("asdasdasdasdasd");
+		SpringApplication application =  new SpringApplication(MyFirstSpringBootApplication.class);
 		application.setWebApplicationType(WebApplicationType.SERVLET);
 		//application.setBannerMode(Banner.Mode.OFF);
 		application.run(args);
