@@ -3,6 +3,7 @@ package com.example.board.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.board.model.UserInfo;
@@ -29,7 +30,7 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value="/getUserInfo", method=RequestMethod.GET)
-	public UserInfo getUserInfo(String userId) throws Exception {
+	public UserInfo getUserInfo(@RequestParam(name = "userId") String userId) throws Exception {
 		log.debug("userName = {}", userId);
 		UserInfo userInfo = boardService.getUser(userId);
 		return userInfo;

@@ -14,14 +14,15 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Entity(name = "UserInfo")
-@Table(name = "userInfo")
+@Table(name = "USER_INFO")
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserInfo {
 	@Id
-	private Long userId;
-	@Column(length = 20, nullable = true)
+	@Column(name = "USER_ID", length = 20, nullable = false)
+	private String userId;
+	@Column(length = 255, nullable = true)
 	private String password;
 	@Column(length = 255, nullable = true)
 	private String email;
